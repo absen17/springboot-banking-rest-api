@@ -20,4 +20,6 @@ public interface BankAccountService {
     BankAccountDto updateAccountById(Long id,BankAccountDto bankAccountDto);
 
     void deleteAccount(Long id);
+
+    String checkBalance(Long id);
 }

@@ -68,4 +68,10 @@ public class BankAccountController {
         BankAccountDto accountDto = bankAccountService.updateAccountById(id, bankAccountDto);
         return new ResponseEntity<>(accountDto,HttpStatus.OK);
     }
+
+    // Check Balance
+    @GetMapping("/{id}/balance")
+    public ResponseEntity<String> checkBalance(@PathVariable("id") Long id){
+        return new ResponseEntity<>(bankAccountService.checkBalance(id),HttpStatus.OK);
+    }
 }

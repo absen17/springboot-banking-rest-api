@@ -111,6 +111,15 @@ public class BankAccountServiceImpl implements BankAccountService {
         bankAccountRepository.deleteById(id);
     }
 
+    @Override
+    public String checkBalance(Long id) {
+
+        BankAccount bankAccount = bankAccountRepository.findById(id).orElseThrow(()
+                                    -> new RuntimeException("Account doesn't exists!"));
+        double balance = bankAccount.getBalance();
+        return "BALANCE is : "+balance;
+    }
+
     // Entity to DTO mapping
     private BankAccountDto mapToDto(BankAccount bankAccount){
         BankAccountDto bankAccountDto = mapper.map(bankAccount,BankAccountDto.class);
