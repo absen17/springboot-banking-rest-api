@@ -1,6 +1,7 @@
 🚀 Simple Banking REST API
 
-    A lightweight and efficient Banking System API built with Java Spring Boot and MySQL. This API lets users create accounts, manage funds, and check balances seamlessly.
+    A lightweight and efficient Banking System API built with Java Spring Boot and MySQL.
+    This API lets users create accounts, manage funds, and check balances seamlessly.
 
 ✨ Features
 
