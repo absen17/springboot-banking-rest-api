@@ -106,7 +106,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     public void deleteAccount(Long id) {
         BankAccount bankAccount = bankAccountRepository
                 .findById(id)
-                .orElseThrow(()-> new RuntimeException("Accounts does not exits"));
+                .orElseThrow(()-> new RuntimeException("Accounts does not exist"));
 
         bankAccountRepository.deleteById(id);
     }
@@ -115,9 +115,9 @@ public class BankAccountServiceImpl implements BankAccountService {
     public String checkBalance(Long id) {
 
         BankAccount bankAccount = bankAccountRepository.findById(id).orElseThrow(()
-                                    -> new RuntimeException("Account doesn't exists!"));
+                                    -> new RuntimeException("Account doesn't exist!"));
         double balance = bankAccount.getBalance();
-        return "BALANCE is : "+balance;
+        return "Balance is : "+balance;
     }
 
     // Entity to DTO mapping
